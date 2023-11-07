@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Решение алгоритмической задачи</title>
+</head>
+<body>
+	<a href="alpr.html">Решение алгоритмической задачи</a>
+
+
+	<form action="https://www.google.com/search" target="_blank" method="GET">
+		<input name="formul" value="Дано вещественное число A. Вычислить x = 0 при a > 100; x = a при a < 61, в противном случае x = a**4" readonly>
+
+		<input type="number" id="numberInput" placeholder="Введите число" step="any" name="q" required>
+
+		<input name="otv" value="Ответ:" readonly>
+
+		<button id="submitButton" type="submit">Получить число</button>
+	</form>
+
+	<script type="text/javascript">
+
+		document.getElementById('submitButton').addEventListener('click', function () {
+        	var a = document.getElementById('numberInput').value;
+        	
+        	var x = 0;
+        	if (a > 100) {
+        		console.log(x);
+        	}
+
+        	else if (a < 61) {
+        		x = a
+        		console.log(x);
+        	}
+
+        	else {
+        		x = a**4
+        		console.log(x);
+        	}
+           	
+           	document.getElementsByName('formul')[0].value
+           	document.getElementsByName('otv')[0].value = "Ответ: " + x
+        });
+	</script> 
+</body>
+</html>

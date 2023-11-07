@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Изменяем кириллицу на латиницу по клику</title>
+</head>
+<body>
+	<p>Паспорт выдан ГУ МВД г.Липецк</p>
+	<p>Дата выдачи: 10.01.2000</p>
+	<p>Код подразделения 444-333</p>
+	<p>Фамилия: Антошин</p>
+	<p>Имя: Владислав</p>
+	<p>Отчество: Витальевич</p>
+	<p>Пол: МУЖ</p>
+	<p>Дата рождения: 10.12.2004</p>
+	<p>ГОР. МОСКВА</p>
+	<button>Go</button>
+	<script type="text/javascript">
+		butt = document.getElementsByTagName('button')[0]
+		butt.onclick = function() {     
+        	document.getElementsByTagName('p')[3].innerText = "Фамилия: Antoshin"
+			document.getElementsByTagName('p')[4].innerText = "Имя: Vladislav"
+			document.getElementsByTagName('p')[7].innerText = "Дата рождения: 10.12.IINNIV"
+			document.getElementsByTagName('p')[2].innerText = "Код подразделения 666-111" 
+        } 
+
+		
+	</script>
+</body>
+</html>
